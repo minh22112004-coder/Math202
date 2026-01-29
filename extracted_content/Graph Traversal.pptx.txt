@@ -1,0 +1,172 @@
+=== Trang 1 ===
+GRAPH TRAVERSAL
+1-1
+
+=== Trang 2 ===
+Example
+Is there a path from 0 to 9? If there is, list one of them.
+1-2
+
+=== Trang 3 ===
+Maze Traversal Puzzle
+1-3
+
+=== Trang 4 ===
+Maze Traversal
+1-4
+
+=== Trang 5 ===
+Graph Traversal
+Graph traversal (also known as graph search) refers to
+the process of visiting (checking and/or updating) each
+vertex in a graph. Such traversals are classified by the
+order in which the vertices are visited
+1-5
+
+=== Trang 6 ===
+Friend of Friend Problem
+1-6
+
+=== Trang 7 ===
+Depth First Search - DFS
+A depth-first search (DFS) is an algorithm for traversing
+a finite graph. DFS visits the child vertices before
+visiting the sibling vertices; that is, it traverses the depth
+of any particular path before exploring its breadth. A
+stack (often the program's call stack via recursion) is
+generally used when implementing the algorithm.
+1-7
+
+=== Trang 8 ===
+1-8
+
+=== Trang 9 ===
+Depth First Search - DFS
+1-9
+
+=== Trang 10 ===
+Depth First Search - DFS
+1-10
+
+=== Trang 11 ===
+Depth First Search - DFS
+1-11
+
+=== Trang 12 ===
+Depth First Search - DFS
+1-12
+
+=== Trang 13 ===
+DFS
+Print the lexicographically largest DFS of the following
+•
+graph starting from 0
+1-13
+
+=== Trang 14 ===
+DFS
+Print the lexicographically smallest DFS of the
+•
+following graph
+0 1 4 6 7 9 8 5 2 3
+1-14
+
+=== Trang 15 ===
+Call Stack
+1-15
+
+=== Trang 16 ===
+Call Stack
+1-16
+
+=== Trang 17 ===
+Traversal Order
+• A preordering is a list of the vertices in the order
+that they were first visited by the depth-first search
+algorithm.
+– E.g. A B D C / A C D B
+• A postordering is a list of the vertices in the order
+that they were last visited by the algorithm.
+– E.g. D B C A / D C B A
+• A reverse postordering is the reverse of a
+postordering, i.e. a list of the vertices in the opposite
+order of their last visit. Reverse postordering is not
+the same as preordering.
+– E.g A C B D / A B C D
+1-17
+
+=== Trang 18 ===
+Depth First Search - DFS
+1-18
+
+=== Trang 19 ===
+DFS Iterative
+• Visited order?
+– A B D C
+– A C D B
+1-19
+
+=== Trang 20 ===
+Breath First Search
+A breadth-first search (BFS) is another technique for
+traversing a finite graph. BFS visits the sibling vertices
+before visiting the child vertices
+A queue is used in the search process. This algorithm is
+often used to find the shortest path from one vertex to
+another.
+1-20
+
+=== Trang 21 ===
+1-21
+
+=== Trang 22 ===
+Breadth First Search
+1-22
+
+=== Trang 23 ===
+1-23
+
+=== Trang 24 ===
+Breath First Search
+1-24
+
+=== Trang 25 ===
+Applications
+• https://www.spoj.com/EIUPROGR/problems/dis2_02/
+– DFS Directed Graph
+– DFS Undirected Graph
+– BFS Directed Graph
+– BFS Undirected Graph
+– Thành phần liên thông
+– Thành phần liên thông 2
+1-25
+
+=== Trang 26 ===
+Complexity
+• O(V+E)
+• Each vertex is only visited once due to the fact that DFS
+will only recursively explore a vertex u if status[u] =
+unvisited — O(V)
+• Every time a vertex is visited, all its k neighbors are
+explored and therefore after all vertices are visited, we
+have examined all E edges — (O(E) as the total number
+of neighbors of each vertex equals to E).
+1-26
+
+=== Trang 27 ===
+Backtracking
+Backtracking is a general algorithm for finding all (or some)
+solutions to some computational problems, notably constraint
+satisfaction problems, that incrementally builds candidates to the
+solutions, and abandons each partial candidate c ("backtracks") as
+soon as it determines that c cannot possibly be completed to a valid
+solution.
+1-27
+
+=== Trang 28 ===
+• Ref:
+– https://en.wikipedia.org/wiki/Depth-first_search
+– https://en.wikipedia.org/wiki/Breadth-first_search
+– https://en.wikipedia.org/wiki/Backtracking
+– http://visualgo.net/dfsbfs.html
+1-28

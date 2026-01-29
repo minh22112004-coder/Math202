@@ -1,0 +1,269 @@
+=== Trang 1 ===
+TOPOLOGICAL
+SORTING
+Ordering tasks with dependencies in Directed Acyclic Graphs (DAGs)
+
+=== Trang 2 ===
+DIRECTED ACYCLIC GRAPH
+A Directed Acyclic Graph (DAG) is a directed graph that does not contain any cycles.
+Applications:
+• Task scheduling (e.g., build systems, course prerequisites)
+• Data processing pipelines
+• Dependency Resolution (e.g., npm)
+• Version control systems (e.g., Git commit history)
+• Topological sorting algorithms
+
+=== Trang 3 ===
+EXAMPLE PROBLEM
+
+=== Trang 4 ===
+EXAMPLE PROBLEM
+
+=== Trang 5 ===
+EXAMPLE PROBLEM
+1 ⃣ Build Systems
+IDEs like Eclipse, NetBeans must build projects with many interdependent libraries.
+Topological Sort helps determine the order in which libraries should be built or included.
+2 ⃣ Advanced Packaging Tool (APT)
+In Linux, apt-get installs software with dependencies.
+Topological Sort ensures packages are installed in the correct dependency order.
+
+=== Trang 6 ===
+EXAMPLE PROBLEM
+3 ⃣ Task Scheduling
+Useful for scheduling tasks with dependencies. Helps determine the correct sequence of
+task execution.
+4 ⃣ Prerequisite Problems
+Common in education or workflows: some tasks require others to be done first.
+Example: must complete Basic Algorithms before Advanced Algorithms.
+
+=== Trang 7 ===
+TOPOLOGICAL SORTING
+A topological sort of a Directed Acyclic Graph (DAG) is a linear ordering of
+vertices such that for every directed edge u-v, vertex u comes before v in the
+ordering.
+Every finite DAG has a topological sort.
+Note: Topological Sorting for a graph is not possible if the graph is not a DAG.
+
+=== Trang 8 ===
+TOPOLOGICAL SORTING
+1 3 5
+2 4 6
+T = (1, 3, 2, 5, 4, 6)
+Note: there may be multiple topological orderings.
+T = (1, 2, 3, 5, 4, 6) is also valid.
+
+=== Trang 9 ===
+TOPOLOGICAL SORT ALGORITHMS
+Two algorithms for finding the topological order of a
+graph:
+1. Kahn’s Algorithm
+2. DFS
+
+=== Trang 10 ===
+KAHN’S ALGORITHM
+Kahn's Algorithm works by repeatedly finding vertices with no
+incoming edges, removing them from the graph, and updating the
+incoming edges of the vertices connected from the removed removed
+edges. This process continues until all vertices have been ordered.
+
+=== Trang 11 ===
+KAHN’S ALGORITHM
+1. Compute the in-degree of each vertex
+2. Add all of the vertices with an in-degree of 0 onto a queue Q
+3. Initialize an empty list topo_order
+4. While Q is not empty:
+a) Remove a node v from Q and add it to topo_order
+b) For each outgoing edge from v, decrement the in-degree of the destination node w by 1.
+c) If the in-degree of w becomes 0, add w to the queue.
+5. If the queue is empty and there are still nodes in the graph, the graph contains a cycle and cannot be
+topologically sorted.
+6. topo_order represent the topological ordering of the graph.
+
+=== Trang 12 ===
+KAHN’S ALGORITHM
+1 3 5
+2 4 6
+
+=== Trang 13 ===
+KAHN’S ALGORITHM
+0 0
+2
+1 3 5
+Compute the in-degree
+of each vertex.
+2
+1
+2
+2 4 6
+
+=== Trang 14 ===
+KAHN’S ALGORITHM
+0 0
+2
+1 3 5
+Put the vertices with
+in-degree onto a
+2
+1 queue.
+2
+2 4 6
+Q = (1, 3)
+T = ()
+
+=== Trang 15 ===
+KAHN’S ALGORITHM
+0 0
+2
+1 3 5
+Add a vertex to T and
+reduce the in-degree of
+1
+0 its neighbours by 1.
+2
+2 4 6
+Q = (3, 2)
+T = (1)
+
+=== Trang 16 ===
+KAHN’S ALGORITHM
+0 0
+1
+1 3 5
+Add a vertex to T and
+reduce the in-degree of
+0
+0 its neighbours by 1.
+2
+2 4 6
+Q = (2, 4)
+T = (1, 3)
+
+=== Trang 17 ===
+KAHN’S ALGORITHM
+0 0
+1
+1 3 5
+Add a vertex to T and
+reduce the in-degree of
+0
+0 its neighbours by 1.
+2
+2 4 6
+Q = (4)
+T = (1, 3, 2)
+
+=== Trang 18 ===
+KAHN’S ALGORITHM
+0 0
+0
+1 3 5
+Add a vertex to T and
+reduce the in-degree of
+0
+0 its neighbours by 1.
+1
+2 4 6
+Q = (5)
+T = (1, 3, 2, 4)
+
+=== Trang 19 ===
+KAHN’S ALGORITHM
+0 0
+0
+1 3 5
+Add a vertex to T and
+reduce the in-degree of
+0
+0 its neighbours by 1.
+0
+2 4 6
+Q = (6)
+T = (1, 3, 2, 4, 5)
+
+=== Trang 20 ===
+KAHN’S ALGORITHM
+0 0
+0
+1 3 5
+0
+0
+0
+2 4 6
+Q = ()
+T = (1, 3, 2, 4, 5, 6)
+
+=== Trang 21 ===
+KAHN’S ALGORITHM
+Time & space Small counterexample
+Edges: A→B, B→C, C→A
+• Time: O(|V| + |E|)
+• Space: O(|V| + |E|) (adj list + queue)
+A B
+Why cycle ⇒ failure?
+In a directed cycle, every node has in-degree ≥ 1 (from
+C
+within the cycle).
+So the queue becomes empty while nodes remain.
+All in-degrees = 1 → Q is empty at start.
+
+=== Trang 22 ===
+EXAMPLES
+
+=== Trang 23 ===
+TOPOLOGICAL SORT USING DFS
+• Initialize an empty list topo_order =[]
+1 3 5
+• For each unvisited vertex in the graph, do the following:
+• Find the post ordering of DFS with the unvisted vertex
+• Append the post ordering DFS to topo_order
+2 4 6
+• →
+Reverse topo_order that is the topological order
+
+=== Trang 24 ===
+TOPOLOGICAL SORT USING DFS
+1. Initialize an empty list: topo_order = [] 1 3 5
+2. For each unvisited vertex u in the graph:
+a. Perform DFS(u):
+i. Mark u as visited 2 4 6
+ii. Recursively DFS all neighbors v of u that are unvisited
+iii. After all neighbors are visited, append u to topo_order
+3. Reverse topo_order → that is the topological order
+
+=== Trang 25 ===
+TOPOLOGICAL SORT USING DFS
+Initilize: topo_order=[]
+• Vertex 0 -> postordering is [0] -> topo_order=[0]
+• Vertex 1 -> postordering is [1] -> topo_order=[0, 1]
+• Vertex 2 -> postordering is [3, 2] -> topo_order=[0, 1, 3, 2]
+• Vertex 4 -> postordering is [4] -> topo_order=[0, 1, 3, 2, 4]
+• Vertex 5 -> postordering is [5] -> topo_order=[0, 1, 3, 2, 4, 5]
+So, the topological order is reverse of [0, 1, 3, 2, 4, 5] = 5, 4, 2, 3, 1, 0
+
+=== Trang 26 ===
+TOPOLOGICAL SORT USING DFS
+•Time complexity: O(|V| + |E|)
+•Space complexity: O(|V| + |E|)
+
+=== Trang 27 ===
+LEXICOGRAPHICALLY SMALLEST
+TOPOLOGICAL ORDERING
+• Lexicographically smallest topological ordering means that if
+two vertices in a graph do not have any incoming edge then the
+vertex with the smaller number should appear first in the
+ordering.
+• How?
+
+=== Trang 28 ===
+LEXICOGRAPHICALLY SMALLEST
+TOPOLOGICAL ORDERING
+Approach: Kahn’s algorithm + Priority Queue
+Time complexity: O(|V|log |V| + |E|)
+
+=== Trang 29 ===
+REFERENCES
+• Kahn's Algorithm
+• Topological Sorting
+• Lexicographically Smallest Topological Ordering:
+https://www.geeksforgeeks.org/dsa/lexicographically-smallest-topological-ordering/

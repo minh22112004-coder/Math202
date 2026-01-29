@@ -1,0 +1,1447 @@
+=== Trang 1 ===
+Discrete Mathematics 2
+Graphs
+
+=== Trang 2 ===
+Simple Graph
+Definition 1. A simple graph G = (V, E)
+consists of V, a nonempty set of vertices,
+and E, a set of unordered pairs of distinct
+elements of V called edges.
+A simple graph is an undirected graph.
+2
+
+=== Trang 3 ===
+Undirected graphs
+In undirected graphs, edges have no
+specific direction. Edges are always
+"two-way"
+
+=== Trang 4 ===
+Simple graph
+Which graph is simple?
+4
+
+=== Trang 5 ===
+A simple graph
+What is the maximum number of edges in a
+simple graph G = (V, E)?
+
+=== Trang 6 ===
+A simple graph
+
+=== Trang 7 ===
+A Non-Simple Graph
+Definition 2. In a multigraph G = (V, E)
+two or more edges may connect the
+same pair of vertices.
+7
+
+=== Trang 8 ===
+A Multigraph
+THERE CAN BE MULTIPLE TELEPHONE LINES
+BETWEEN TWO COMPUTERS IN THE NETWORK.
+Detroit
+New
+York
+San Francisco
+Chicago
+Denver Washington
+Los
+Angeles
+8
+
+=== Trang 9 ===
+Multiple Edges
+Detroit
+New
+San Francisco York
+Chicago
+Denver Washington
+Los Angeles
+Two edges are called multiple or parallel edges if they
+connect the same two distinct vertices.
+9
+
+=== Trang 10 ===
+Loops
+Detroit
+New
+San Francisco
+York
+Chicago
+Denver
+Washington
+Los Angeles
+An edge is called a loop if it connects a vertex to itself.
+10
+
+=== Trang 11 ===
+A Directed Graph
+Definition 4. In a directed graph G = (V, E) the
+edges are ordered pairs of (not necessarily
+distinct) vertices.
+11
+
+=== Trang 12 ===
+A Directed Graph
+SOME TELEPHONE LINES IN THE NETWORK
+MAY OPERATE IN ONLY ONE DIRECTION .
+Those that operate in two directions are
+represented by pairs of edges in opposite
+directions.
+Detroit
+Chicago
+New
+San Francisco
+York
+Denver Washington
+Los Angeles
+12
+
+=== Trang 13 ===
+A Directed Multigraph
+Definition 5. In a directed multigraph G = (V, E)
+the edges are ordered pairs of (not necessarily
+distinct) vertices, and in addition there may
+be multiple edges.
+13
+
+=== Trang 14 ===
+A Directed Multigraph
+THERE MAY BE SEVERAL ONE-WAY LINES IN THE SAME
+DIRECTION FROM ONE COMPUTER TO ANOTHER IN THE
+NETWORK.
+Detroit
+New
+York
+Chicago
+San Francisco
+Denver Washington
+Los
+Angeles
+14
+
+=== Trang 15 ===
+Weighted Graph
+In a weighted graph, each edge has a weight or cost
+▪ Usually, the edge weights are nonnegative integers.
+▪ Some graphs allow negative weights
+
+=== Trang 16 ===
+Adjacent Vertices (Neighbors)
+Definition 1. Two vertices, u and v in an undirected
+graph G are called adjacent (or neighbors) in G, if
+{u, v} is an edge of G.
+An edge e connecting u and v is called incident with
+vertices u and v, or is said to connect u and v. The
+vertices u and v are called endpoints of edge {u, v}.
+16
+
+=== Trang 17 ===
+Degree of a vertex
+Definition 1. The degree of a vertex in an undirected
+graph is the number of edges incident with it,
+except that a loop at a vertex contributes twice to
+the degree of that vertex.
+c d
+deg( d ) = 1
+b
+a g f e
+17
+
+=== Trang 18 ===
+Degree of a vertex
+Definition 1. The degree of a vertex in an undirected
+graph is the number of edges incident with it, except
+that a loop at a vertex contributes twice to the
+degree of that vertex.
+c d
+b
+deg( e ) = 0
+a g f e
+18
+
+=== Trang 19 ===
+Degree of a vertex
+Definition 1. The degree of a vertex in an
+undirected graph is the number of edges
+incident with it, except that a loop at a vertex
+contributes twice to the degree of that vertex.
+c d
+deg( b ) = 6
+b
+a g f e
+19
+
+=== Trang 20 ===
+Degree of a vertex
+Find the degree of all the other vertices.
+deg( a ) deg( c ) deg( f ) deg( g )
+c d
+deg( b ) = 6 deg( d ) = 1
+b
+deg( e ) = 0
+a g f e
+20
+
+=== Trang 21 ===
+Degree of a vertex
+Find the degree of all the other vertices.
+deg( a ) = 2 deg( c ) = 4 deg( f ) = 3 deg( g ) = 4
+c d
+deg( b ) = 6 deg( d ) = 1
+b
+deg( e ) = 0
+a g f e
+21
+
+=== Trang 22 ===
+Degree of a vertex
+Find the degree of all the other vertices.
+deg( a ) = 2 deg( c ) = 4 deg( f ) = 3 deg( g ) = 4
+TOTAL of degrees = 2 + 4 + 3 + 4 + 6 + 1 + 0 = 20
+c d
+deg( b ) = 6 deg( d ) = 1
+b
+deg( e ) = 0
+a g f e
+22
+
+=== Trang 23 ===
+Degree of a vertex
+Find the degree of all the other vertices.
+deg( a ) = 2 deg( c ) = 4 deg( f ) = 3 deg( g ) = 4
+TOTAL of degrees = 2 + 4 + 3 + 4 + 6 + 1 + 0 = 20
+TOTAL NUMBER OF EDGES = 10
+c d
+deg( b ) = 6 deg( d ) = 1
+b
+deg( e ) = 0
+a g f e
+23
+
+=== Trang 24 ===
+Degree of a vertex
+An isolated vertex is a vertex of a graph that has
+no edges, a vertex with degree zero.
+c d
+b
+a g f e
+
+=== Trang 25 ===
+Handshaking Theorem
+Theorem 1. Let G = (V, E) be an undirected
+graph G with e edges. Then
+∑ deg( v ) = 2 e
+ε
+v V
+“The sum of the degrees over all the vertices equals
+twice the number of edges.”
+NOTE: This applies even if multiple edges and loops are present.
+25
+
+=== Trang 26 ===
+Handshaking Theorem
+Let G = (V, E) be an directed graph Then
+- +
+∑deg ( v ) = ∑deg ( v ) = |E|
+ε
+v V
+“The sum of the in-degrees of all vertices is equal
+to the sum of the out-degrees of all vertices.”
+26
+
+=== Trang 27 ===
+Graph Terminology
+Example: How many edges are there in a graph with
+●
+10 vertices, each of degree 6?
+27
+
+=== Trang 28 ===
+Graph Terminology
+Example: How many edges are there in a graph with
+●
+10 vertices, each of degree 6?
+Solution: The sum of the degrees of the vertices is
+●
+6⋅10 = 60. According to the Handshaking Theorem, it
+follows that 2e = 60, so there are 30 edges.
+28
+
+=== Trang 29 ===
+Graph Terminology
+• Prove that an undirected graph has an even
+number of vertices of odd degree.
+• Prove that any simple graph with at least two
+vertices contains two vertices that have the same
+degree.
+●
+29
+
+=== Trang 30 ===
+Graph Terminology
+An undirected graph has an even number of vertices
+●
+of odd degree.
+Let V1 and V2 be the set of vertices of even and odd
+●
+degrees, respectively (Thus V1 ∩ V2 = ∅, and V1
+∪V2 = V).
+Then by Handshaking theorem
+●
+2|E| = ∑ deg(v) = ∑ deg(v) + ∑ deg(v)
+●
+v∈V v∈V1 v∈V2
+Since both 2|E| and ∑ deg(v) are even,
+●
+v∈V1
+∑ deg(v) must be even.
+●
+v∈V2
+Since deg(v) if odd for all v∈V2, |V2| must be even.
+●
+QED
+●
+30
+
+=== Trang 31 ===
+Graph Representations
+Which data structure is "best" can depend on:
+properties of the graph (e.g., dense versus
+●
+sparse)
+the common queries about the graph ("is (u
+●
+,v) an edge?" vs "what are the neighbors of
+node u?")
+Two representations: Adjacency Matrix and
+Adjacency List
+Different trade-offs, particularly time versus
+●
+space
+
+=== Trang 32 ===
+Adjacency Matrix
+A simple graph G = (V, E) with n vertices can be
+represented by its adjacency matrix, A, where entry
+a in row i and column j is
+ij
+1 if { v , v } is an edge in
+i j
+G,
+=
+a
+ij
+0 otherwise.
+32
+
+=== Trang 33 ===
+Finding the adjacency matrix
+This graph has 6 vertices a,
+c
+b, c, d, e, f. We can arrange
+them in that order.
+b d
+f
+a e
+W
+5
+33
+
+=== Trang 34 ===
+Finding the adjacency matrix
+TO
+c
+a b c d e f
+FROM
+a
+0 1 0 0 1 1
+b d
+b
+f
+c
+a e
+d
+e
+W
+5
+f
+There are edges from a to b, from a to e, and from a to f
+34
+
+=== Trang 35 ===
+Finding the adjacency matrix
+TO
+c
+a b c d e f
+FROM
+a
+0 1 0 0 1 1
+b d
+b
+1 0 1 0 0 1
+f
+c
+a e
+d
+e
+W
+5
+f
+There are edges from b to a, from b to c, and from b to f
+35
+
+=== Trang 36 ===
+Finding the adjacency matrix
+TO
+c
+a b c d e f
+FROM
+a
+0 1 0 0 1 1
+b d
+b
+1 0 1 0 0 1
+f
+c
+0 1 0 1 0 1
+a e
+d
+e
+W
+5
+f
+There are edges from c to b, from c to d, and from c to f
+36
+
+=== Trang 37 ===
+Finding the adjacency matrix
+TO
+c
+a b c d e f
+FROM
+a
+0 1 0 0 1 1
+b d
+b
+f
+1 0 1 0 0 1
+c
+0 1 0 1 0 1
+a e
+d
+e
+W
+5
+f
+COMPLETE THE ADJACENCY MATRIX . . .
+35
+
+=== Trang 38 ===
+Finding the adjacency matrix
+TO
+c a b c d e f
+FROM
+a 0 1 0 0 1 1
+b d
+b 1 0 1 0 0 1
+f
+c 0 1 0 1 0 1
+a e
+d 0 0 1 0 1 1
+W
+e 1 0 0 1 0 1
+5
+f 1 1 1 1 1 0
+Notice that this matrix is symmetric. That is a = a Why?
+ij ji
+38
+
+=== Trang 39 ===
+Adjacency Matrix
+A directed graph G = (V, E) with n vertices can be
+represented by its adjacency matrix, A, where
+entry a in row i and column j is
+ij
+1 if ( v , v ) is an edge in
+i j
+G,
+=
+a
+ij
+0 otherwise.
+39
+
+=== Trang 40 ===
+Adjacency Matrix Properties
+a b c d e f
+Running time to:
+a 0 1 0 0 1 1
+Get a vertex’s out-edges:
+Get a vertex’s in-edges: b 1 0 1 0 0 1
+Decide if some edge exists:
+c 0 1 0 1 0 1
+Insert an edge:
+d 0 0 1 0 1 1
+Delete an edge:
+e 1 0 0 1 0 1
+f 1 1 1 1 1 0
+Space requirements:
+4
+Best for sparse or dense graphs? 0
+July 23, 2012 CSE 332 Data Abstractions,
+Summer 2012
+
+=== Trang 41 ===
+Adjacency Matrix Properties
+Running time to:
+Get a vertex’s out-edges:
+O(|V|)
+Get a vertex’s in-edges:
+O(|V|)
+Decide if some edge exists:
+O(1)
+Insert an edge: O(1)
+Delete an edge: O(1)
+Space requirements:
+O(|V| 2)
+Best for sparse or dense graphs? dense
+4
+1
+July 23, 2012 CSE 332 Data Abstractions,
+Summer 2012
+
+=== Trang 42 ===
+Adjacency Matrix Properties
+How can we adapt the representation for weighted graphs?
+❖
+Store the weight in each cell
+❖
+Need some value to represent ‘not an edge’
+➢
+0, -1, or some other value based on how you are using the
+graph
+➢
+Might need to be a separate field if no restrictions on weights
+
+=== Trang 43 ===
+Adjacency List
+An array of length |V| in which each entry stores
+a list of all adjacent vertices (e.g., linked list)
+43
+
+=== Trang 44 ===
+Adjacency List
+
+=== Trang 45 ===
+Adjacency List Properties
+Running time to:
+Get a vertex’s out-edges:
+Get a vertex’s in-edges:
+Decide if some edge exists:
+Insert an edge:
+Delete an edge:
+Space requirements:
+Best for sparse or dense graphs?
+45
+
+=== Trang 46 ===
+Adjacency List Properties
+Running time to:
+Get a vertex’s out-edges:
+O(d) where d is out-degree of vertex
+Get a vertex’s in-edges:
+O(|E|) (could keep a second adjacency list for this!)
+Decide if some edge exists:
+O(d) where d is out-degree of source
+Insert an edge:
+O(1) (unless you need to check if it’s already there)
+Delete an edge:
+O(d) where d is out-degree of source
+Space requirements:
+O(|V|+|E|)
+Best for sparse or dense graphs? sparse
+4
+6
+July 23, 2012 CSE 332 Data Abstractions,
+Summer 2012
+
+=== Trang 47 ===
+Undirected Graphs
+Adjacency lists also work well for undirected graphs with
+one caveat
+Put each edge in two lists to support efficient "get all
+neighbors"
+
+=== Trang 48 ===
+Which is better?
+Graphs are often sparse
+Streets form grids
+Airlines rarely fly to all cities
+Adjacency lists should generally be your default choice
+Slower performance compensated by greater space savings
+4
+8
+July 23, 2012 CSE 332 Data Abstractions,
+Summer 2012
+
+=== Trang 49 ===
+Graph Representations
+Is there any other graph representation?
+Incidence Matrix
+●
+Edge list
+●
+
+=== Trang 50 ===
+Incidence Matrix
+Let G=(V,E) be an undirected graph. Suppose that v , v ,…,
+1 2
+v are the vertices and e ,e ,…,e are the edges of G. The
+n 1 2 m
+incidence matrix with respect to this ordering of V and E is
+the n×m matrix M = [m ], where
+ij
+1 if edge e is incident with vi
+j
+=
+m
+ij
+0 otherwise.
+
+=== Trang 51 ===
+Path of Length n
+Definition 1. A path of length n from u to v in an
+undirected graph is a sequence of edges
+e , e , . . ., e of the graph such that edge
+1 2 n
+e has endpoints x and x , edge e has
+1 o 1 2
+endpoints x and x ,
+1 2
+. . .
+and edge e has endpoints x and x ,
+n n-1 n
+where x = u and x = v.
+0 n
+51
+
+=== Trang 52 ===
+Path of Length n
+A path of length n from u to v in an directed graph is a
+sequence of edges
+e , e , . . ., e of the graph such that edge e
+1 2 n 1
+is associated with (x , x )
+0 1
+edge e is associated with (x , x )
+2 1 2
+. . .
+and edge e is associated with (x , x )
+n n-1 n
+where x = u and x = v.
+0 n
+52
+
+=== Trang 53 ===
+One path from a to e
+This path passes through
+c
+vertices f and d in that
+b d order.
+f
+a e
+W
+5
+53
+
+=== Trang 54 ===
+One path from a to a
+This path passes through
+c vertices f, d, e,in that order.
+It has length 4.
+b d
+f It is a circuit because it begins
+and ends at the same vertex.
+a e
+It is called simple because it
+W
+5
+does not contain the same
+edge more than once.
+54
+
+=== Trang 55 ===
+Path of Length n
+How to count the number of path of length n?
+
+=== Trang 56 ===
+Path of Length n
+How to count the number of path of length n?
+
+=== Trang 57 ===
+Connected graph
+Definition 3. An undirected graph is called
+connected if there is a path between every pair
+of distinct vertices of the graph.
+c
+d
+b
+f
+IS THIS GRAPH CONNECTED?
+a e
+W
+5
+57
+
+=== Trang 58 ===
+Connected Graph
+There is a simple path between every pair of distinct
+vertices of a connected undirected graph.
+
+=== Trang 59 ===
+Connected Components
+A connected component of a graph G is a
+connected subgraph of G that is not a proper
+subgraph of another connected subgraph of G.
+That is, a connected component of a graph G is
+a maximal connected subgraph of G.
+A graph G that is not connected has two or more
+connected components that are disjoint and
+have G as their union
+
+=== Trang 60 ===
+Connected Components
+How many connected components are there in
+the following graph?
+
+=== Trang 61 ===
+Connectedness in Directed Graphs
+A directed graph is strongly connected if there is a path
+from a to b and from b to a whenevera and b are vertices in
+the graph
+Strongly connected
+
+=== Trang 62 ===
+Connectedness in Directed Graphs
+A directed graph is weakly connected if there is
+a path between every two vertices in the
+underlying undirected graph.
+Not strongly connected but weakly connected
+
+=== Trang 63 ===
+STRONGLY CONNECTED COMPONENTS
+The subgraphs of a directed graph G that are strongly
+connected but not contained in larger strongly connected
+subgraphs, that is, the maximal strongly connected
+subgraphs, are called the strongly connected components
+or strong components of G
+How many?
+
+=== Trang 64 ===
+Subgraph
+Definition 6. A subgraph of a graph G = (V, E) is
+a graph H = (W, F) where W ⊆ V and F ⊆ E.
+64
+
+=== Trang 65 ===
+C is a subgraph of K
+5 5
+K
+5
+C
+5
+65
+
+=== Trang 66 ===
+Union
+Definition 7. The union of 2 simple graphs
+G = ( V , E ) and G = ( V , E ) is the
+1 1 1 2 2 2
+simple graph with vertex set V = V ∪ V and
+1 2
+edge set E = E ∪ E . The union is denoted
+1 2
+by G ∪ G .
+1 2
+66
+
+=== Trang 67 ===
+W is the union of S and
+C
+5 5 5
+c
+b d
+c
+f
+c
+a e
+b d
+f
+S
+5
+b d
+a e
+W
+5 a e
+C
+5 28
+
+=== Trang 68 ===
+Special Graphs
+Definition: The complete graph on n vertices,
+denoted by K , is the simple graph that contains
+n
+exactly one edge between each pair of distinct
+vertices.
+K K K K K
+1 2 3 4 5
+68
+
+=== Trang 69 ===
+Special Graphs
+Definition: The cycle C , n ≥ 3, consists of n
+n
+vertices v , v , …, v and edges {v , v }, {v , v }, …,
+1 2 n 1 2 2 3
+{v , v }, {v , v }.
+n-1 n n 1
+C C C C
+3 4 5 6
+69
+
+=== Trang 70 ===
+Special Graphs
+Definition: We obtain the wheel W when we add
+n
+an additional vertex to the cycle C , for n ≥ 3, and
+n
+connect this new vertex to each of the n vertices
+in C by adding new edges.
+n
+W W W W
+3 4 5 6
+70
+
+=== Trang 71 ===
+Special Graphs
+Definition: The n-cube, denoted by Q , is the
+n
+n
+graph that has vertices representing the 2 bit
+strings of length n. Two vertices are adjacent if
+and only if the bit strings that they represent
+differ in exactly one bit position.
+110
+100 111
+10 11
+101
+010
+011
+0 1
+00 01 001
+000
+Q Q Q
+1 2 3
+71
+
+=== Trang 72 ===
+Special Graphs
+Definition: A simple graph is called bipartite if its
+vertex set V can be partitioned into two disjoint
+nonempty sets V and V such that every edge in the
+1 2
+graph connects a vertex in V with a vertex in V (so
+1 2
+that no edge in G connects either two vertices in V or
+1
+two vertices in V ).
+2
+For example, consider a graph that represents
+each person in a village by a vertex and each
+marriage by an edge.
+This graph is bipartite, because each edge connects a
+vertex in the subset of males with a vertex in the
+subset of females (if we think of traditional
+72
+marriages).
+
+=== Trang 73 ===
+Special Graphs
+Example I: Is C bipartite?
+3
+No, because there is no way to
+v
+1
+partition the vertices into two sets
+so that there are no edges with
+v v
+2 3
+both endpoints in the same set.
+Example II: Is C bipartite?
+6
+v
+v
+v
+1
+v
+1
+6
+6 Yes, because
+v
+v
+5
+v v we can display 2
+2
+5
+C like this:
+v
+6 v
+v
+v 4
+3 3
+4
+73
+
+=== Trang 74 ===
+Special Graphs
+Definition: The complete bipartite graph K is
+m,n
+the graph that has its vertex set partitioned into
+two subsets of m and n vertices, respectively. Two
+vertices are connected if and only if they are in
+different subsets.
+K
+K
+3,2
+3,4
+74
+
+=== Trang 75 ===
+Operations on Graphs
+Definition: A subgraph of a graph G = (V, E) is
+a graph H = (W, F) where W⊆V and F⊆E.
+Note: Of course, H is a valid graph, so we
+cannot remove any endpoints of remaining edges
+when creating H.
+Example:
+K subgraph of K
+5 5
+75
+
+=== Trang 76 ===
+Euler Circuit
+A Euler Circuit in a graph G is a simple
+■
+circuit that includes all edges and
+vertices of G.
+A Euler Path in a graph G is a simple
+■
+path that includes all edges and
+vertices of G.
+Visit each
+edge once
+
+=== Trang 77 ===
+Hamiltonian circuit
+… a circuit where each vertex in G
+■
+is used exactly once
+Visit each
+b c vertex once
+c
+d e f
+a
+d
+b
+g h
+a e
+Hamiltonian & Euler
+Hamiltonian
+circuit
+circuit
+
+=== Trang 78 ===
+Euler cycle and paths
+Euler path: a path traversing all the edges of the
+graph exactly once
+Euler cycle: a cycle traversing all the edges of the
+graph exactly once
+No Euler
+Has Euler
+cycle no
+cycle
+Euler path
+Has Euler path,
+but no Euler
+cycle
+
+=== Trang 79 ===
+Necessary and sufficient
+conditions for Euler cycles
+Theorem 1: A connected multigraph has an Euler cycle
+if and only if each of its vertices has even degree.
+No Euler
+Has Euler
+cycle no
+cycle
+Euler path
+C
+Euler cycle???
+path???
+Has Euler path,
+but no Euler
+A D
+cycle
+B
+
+=== Trang 80 ===
+Necessary condition for Euler cycle
+Theorem 1: A connected multigraph has an
+only
+if
+Euler cycle if and each of its
+vertices has even degree.
+Proof Sketch, PART 1:
+Assume the graph has an Euler cycle.
+■
+Observe that every time the cycle passes
+■
+through a vertex, it contributes 2 to the
+vertex’s degree
+(since the cycle enters via an edge incident
+with this vertex and leaves via another such
+edge)
+
+=== Trang 81 ===
+Necessary and sufficient conditions for
+Euler paths
+. A connected multigraph has an
+Theorem 2
+Euler path but not an Euler cycle if and only
+if it has exactly two vertices of odd degree.
+
+=== Trang 82 ===
+Hamilton paths and
+cycles
+Hamilton cycle: visits every vertex of the graph exactly once
+before returning, as the last step, to the starting vertex.
+Hamilton path: visits every vertex of the graph exactly once.
+Examples:
+
+=== Trang 83 ===
+Hamilton paths and cycles (cont.)
+No property is known to efficiently verify existence of a Hamilton
+cycle/path for general graphs.Moreover, the problem is known to be
+as difficult as the TSP (find the shortest H. cycle through n cities).
+Dirac’s Theorem: If G is a simple graph with n ≥ 3 vertices such that
+the degree of every vertex is at least n/2, then G has a Hamilton
+cycle.
+Ore’s Theorem: If G is a simple graph with n ≥ 3 vertices such that
+the deg(u) + deg(v) n for every pair of nonadjacent vertices u and
+≥
+v, then G has a Hamilton cycle.
+Ore’s condition is more general than Dirac’s but neither is
+necessary for existence of a Hamilton cycle.
+
+=== Trang 84 ===
+Graph Isomorphism
+
+=== Trang 85 ===
+Graph Isomorphism
+Two graphs G=(V,E) and H=(W,F) are isomorphic if
+there is a bijective function f: V → W such that for
+all v, w ∈ V:
+{v,w} ∈ E ⇔ {f(v),f(w)} ∈ F
+Graph Isomorphism
+
+=== Trang 86 ===
+Variant for labeled graphs
+Let G = (V,E), H=(W,F) be graphs with vertex
+labelings l: V → L, l’: W→ L.
+G and H are isomorphic labeled graphs, if
+there is a bijective function f: V → W such
+that
+For all v, w ∈ V: {v,w} ∈ E ⇔ {f(v),f(w)} ∈ F
+For all v ∈ V: l(v) = l’(f(v)).
+Graph Isomorphism 86
+
+=== Trang 87 ===
+Complexity of graph isomorphism
+Problem is in NP, but
+No NP-completeness proof is known
+No polynomial time algorithm is known
+If P ≠ NP
+?
+Graph
+NP-complete
+isomorphism
+NP
+P
+Graph Isomorphism 87
+
+=== Trang 88 ===
+Complexity of graph isomorphism
+László Babai (2017) proposed an algorithm with
+complexity of quasi-polynomial (not
+polynomial time)
+Graph Isomorphism 88
+
+=== Trang 89 ===
+Isomorphism-complete
+Problems are
+isomorphism-complete, if they
+are `equally hard’ as graph
+isomorphism
+Isomorphism of bipartite graphs
+Isomorphism of labeled graphs
+Automorphism of graphs
+Given: a graph G=(V,E)
+Question: is there a non-trivial
+automorphism, i.e., a bijective function f:
+V → V, not the identity, with for all v,w∈V:
+{v,w} ∈ E, if and only if {f(v),f(w)} ∈ E.
+Graph Isomorphism 89
+
+=== Trang 90 ===
+Special cases are easier
+Polynomial time algorithms for
+Graphs of bounded degree (Luks' Algorithm
+❖
+(1982))
+Planar graphs (Hopcroft & Wong (1974))
+❖
+Trees (tree coding, centered tree matching)
+❖
+Expected polynomial time for random graphs
+Graph Isomorphism 90
+
+=== Trang 91 ===
+An equivalence relation on vertices
+Say v ~ w, if and only if there is an automorphism
+mapping v to w.
+~ is an equivalence relation
+Partitions the vertices in automorphism classes
+Tells on structure of graph
+Graph Isomorphism 91
+
+=== Trang 92 ===
+Planar graphs
+A graph is planar if it can be drawn in
+■
+the plane without any edges crossing
+A graph that is so drawn in the plane
+■
+is a plane graph (planar representation).
+000 001
+010 011
+K
+Q
+4
+3
+100 101
+110 111
+92
+
+=== Trang 93 ===
+Plane graphs
+(a) planar, (c) another
+(b) a plane graph
+not a plane graph plane graph
+
+=== Trang 94 ===
+Planar graphs
+Let G be a plane graph. The connected pieces of the plane
+■
+that remain when the vertices and edges of G are
+removed are called the regions (faces) of G.
+R : exterior
+3
+R
+1
+R
+2
+
+=== Trang 95 ===
+Planar graphs
+Every plane graph has exactly one unbounded region,
+called the exterior region (outer face). The vertices and
+edges of G that are incident with a region R form a
+subgraph of G called the boundary of R.
+
+=== Trang 96 ===
+Planar graphs
+Every plane graph has exactly one unbounded region,
+called the exterior region. The vertices and edges of G
+that are incident with a region R form a subgraph of G
+called the boundary of R.
+G
+v v
+1 2
+3
+R
+1
+v
+3
+v
+R
+5 v G has 5 regions.
+5
+4 3
+v v
+R
+6 7
+2
+R
+v
+3
+v
+8
+R 9
+4
+
+=== Trang 97 ===
+Planar graphs
+Degree of a region, which is defined to be the number of
+edges on the boundary of this region
+∑ deg( r ) = 2 e
+ε
+r G
+
+=== Trang 98 ===
+Euler’s Formula
+Euler’s Formula: If G is a connected plane
+graph with n vertices, m edges, and r
+regions, then
+n − m + r = 2.
+
+=== Trang 99 ===
+Euler’s Formula
+pf: (by induction)
+(basis) If m = 0 , so n = 1, r =1,
+and n − m + r = 2.
+Constructing a sequence of subgraphs G ,G ,…,G = G,
+1 2 e
+successively adding an edge at each stage. Because G is
+connected , G can be obtained from G by arbitrarily
+n n−1
+adding an edge that is incident with a vertex already in
+G
+n−1.
+Assume that the formula is true for G ,G ,…,G , that r =
+1 2 k k
+m −n +2.
+k k
+
+=== Trang 100 ===
+Euler’s Formula
+Let {a ,b } be the edge that is added to G to
+k+1 k+1 k
+obtain G . There are two cases:
+k+1
+Case 1: Both a and b are already in G =>
+k+1 k+1 k
+boundary of a common
+they must be on the
+region R
+(G is planar). (it is impossible to
+k+1 G
+v v
+add the edge without two edge crossing if both
+1 2
+vertices belongs to different regions). The 3
+adding edge split R into two regions:
+v
+3
+v
+v
+r = r +1, n = n +1, m = m . 5
+4
+k+1 k k+1 k k+1 k
+v v
+Because r = m −n +2 (assumption), r = 6 7
+k k k k+1
+m −n +2.
+k k+1
+v
+v
+8
+9
+
+=== Trang 101 ===
+Euler’s Formula
+Let {a ,b } be the edge that is added to G to obtain G . There
+k+1 k+1 k k+1
+are two cases:
+Case 2: a is in G while b is adding => The adding edge does
+k+1 k k+1
+not produce any new region
+r = r , n = n +1, m = m .
+k+1 k k+1 k k+1 k
+Because r = m −n +2 (assumption), r = m −n +2.
+k k k k+1 k k+1
+In both cases, r = m −n +2 for G
+k+1 k k+1 k+1
+=> r = m −n +2 for G
+
+=== Trang 102 ===
+Euler’s Formula - Corollary1
+If G is a connected planar simple graph with n
+(n ≥ 3) vertices, m edges
+m ≤ 3n − 6.
+Prove: The degree of each region is at least three (no
+multiple edges, loops)
+Sum of the degrees of the regions is 2m
+
+=== Trang 103 ===
+Planar graph
+Every planar graph contains a vertex of
+degree 5 or less.
+pf:
+Let G be a planar graph of n vertices and m edges.
+If deg(v) ≥ 6 for every v∈V(G)
+⇒
+⇒ m ≥ 3n →← COROLLARY1
+
+=== Trang 104 ===
+Planar graph
+A plane graph G is called maximal planar if,
+for every pair u, v of nonadjacent vertices of
+G, the graph G+uv is nonplanar.
+■ If G is a maximal simple planar graph with p ≥
+3 vertices and q edges, then
+q = 3p - 6.
+■ If G is a maximal simple planar bipartite graph
+with p ≥ 3 vertices and q edges, then
+q = 2p - 4
+
+=== Trang 105 ===
+Planar graph
+The graphs K and K are nonplanar.
+5 3,3
+(1) K has p = 5 vertices and q = 10 edges.
+5
+q > 3p − 6 ⇒ K is nonplanar.
+5
+(2) Suppose K is planar, and consider any
+3,3
+embedding of K in the plane.
+3,3
+Suppose the embedding has r regions.
+p − q + r = 2 ⇒ r = 5
+K is bipartite
+3,3
+⇒ The boundary of every region has ≥4 edges.
+⇒
+→←
+
+=== Trang 106 ===
+Planar graph
+A subdivision of a graph G is a graph obtained
+by inserting vertices (of degree 2) into the
+edges of G.
+Two graphs G1 and G2 are called
+homeomorphic if they are constructed from the
+same graph through a sequence of divisions
+
+=== Trang 107 ===
+Subdivisions of graphs.
+H
+G
+H is a subdivision of G.
+F
+F is not a subdivision of G.
+
+=== Trang 108 ===
+Kuratowski’s Theorem
+A graph is planar if and only if it contains no subgraph
+that is isomorphic to or is a subdivision of K or K .
+5 3,3
+1 2 3
+1
+4 5 6
+10 7
+4 5 6
+2 3
+8
+9
+(b) Subdivision of K
+(a) Petersen
+3,3
+
+=== Trang 109 ===
+Graph Coloring
+A coloring of the vertices of a graph G is an assignment of colors to
+the vertices. A coloring is proper if adjacentvertices always have
+different colors. This is also called the vertex coloring problem
+An m-coloring of G is a mapping from V onto the set
+{1,2,...,m} of m “colors”
+Graph coloring includes:
+• Vertex coloring
+• Edge coloring
+• Face coloring
+10
+9
+
+=== Trang 110 ===
+Graph Coloring
+•What is the least number of colors needed to color a map?
+11
+0
+
+=== Trang 111 ===
+Dual Map
+Region = vertex
+Common border = edge
+G A
+D
+C
+Chromatic number χ
+E
+B (G)
+F
+G H
+What is the least number
+I
+of colors needed to color
+the vertices of a graph so
+that no two adjacent
+vertices are assigned the
+same color? 11
+1
+
+=== Trang 112 ===
+Four color theorem
+Every planar graph is 4-colorable
+000 001
+010 011
+K
+4
+Q
+3
+100 101
+110 111
+11
+2
+
+=== Trang 113 ===
+Chromatic Numbers (cont.)
+There is no efficient algorithm for finding χ(G)
+■
+for an arbitrary graph. Most computer
+scientists believe that such an algorithm
+doesn’t exist.
+There is an efficient algorithm to determine
+■
+whether a given graph is bipartite, i.e.,
+2-colorable.
+Applications:
+■
+map coloring
+■
+scheduling
+■
+11
+3

@@ -1,0 +1,676 @@
+=== Trang 1 ===
+Discrete Mathematics and
+Its Applications
+Kenneth H. Rosen
+Chapter 8
+Trees
+Slides by Sylvia Sorkin, Community College of Baltimore County - Essex Campus
+1
+
+=== Trang 2 ===
+Tree
+Definition 1. A tree is a connected
+undirected graph with no simple circuits.
+Theorem 1. An undirected graph is a tree if
+and only if there is a unique simple path
+between any two of its vertices.
+2
+
+=== Trang 3 ===
+Which graphs are trees?
+b)
+a)
+c)
+3
+
+=== Trang 4 ===
+Specify a vertex as root
+Then, direct each edge away from the root.
+ROOT
+c)
+4
+
+=== Trang 5 ===
+Specify a root.
+Then, direct each edge away from the root.
+ROOT
+a)
+5
+
+=== Trang 6 ===
+Specify a root.
+Then, direct each edge away from the root.
+ROOT
+a)
+6
+
+=== Trang 7 ===
+Specify a root.
+Then, direct each edge away from the root.
+ROOT
+a)
+A directed graph called
+a rooted tree results.
+7
+
+=== Trang 8 ===
+What if a different root is chosen?
+Then, direct each edge away from the root.
+ROOT
+a)
+8
+
+=== Trang 9 ===
+What if a different root is chosen?
+Then, direct each edge away from the root.
+ROOT
+a)
+9
+
+=== Trang 10 ===
+What if a different root is chosen?
+Then, direct each edge away from the root.
+ROOT
+a)
+10
+
+=== Trang 11 ===
+What if a different root is chosen?
+Then, direct each edge away from the root.
+ROOT
+a)
+A different
+rooted tree results.
+11
+
+=== Trang 12 ===
+Jake’s Pizza Shop Tree
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+12
+
+=== Trang 13 ===
+A Tree Has a Root
+TREE ROOT
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+13
+
+=== Trang 14 ===
+Leaf nodes have no children
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+LEAF NODES
+14
+
+=== Trang 15 ===
+A Tree Has Levels
+Owner Jake
+LEVEL 0
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+15
+
+=== Trang 16 ===
+Level One
+Owner Jake
+Manager Brad Chef Carol
+LEVEL 1
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+16
+
+=== Trang 17 ===
+Level Two
+Owner Jake
+Manager Brad Chef Carol
+LEVEL 2
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+17
+
+=== Trang 18 ===
+Sibling nodes have same parent
+Owner Jake
+SIBLINGS
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+18
+
+=== Trang 19 ===
+Sibling nodes have same parent
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+SIBLINGS
+19
+
+=== Trang 20 ===
+A Subtree
+ROOT
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+LEFT SUBTREE OF ROOT
+20
+
+=== Trang 21 ===
+Another Subtree
+ROOT
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+RIGHT SUBTREE OF ROOT
+21
+
+=== Trang 22 ===
+Internal Vertex
+A vertex that has children is called an
+internal vertex.
+The subtree at vertex v is the subgraph of
+the tree consisting of vertex v and its
+descendants and all edges incident to
+those descendants.
+22
+
+=== Trang 23 ===
+How many internal vertices?
+Owner Jake
+Manager Brad Chef Carol
+Waitress Waiter Cook Helper
+Joyce Chris Max Len
+23
+
+=== Trang 24 ===
+Binary Tree
+Definition 2’. A rooted tree is called a
+binary tree if every internal vertex has
+no more than 2 children.
+The tree is called a full binary tree if
+every internal vertex has exactly 2
+children.
+24
+
+=== Trang 25 ===
+Ordered Binary Tree
+Definition 2’’. An ordered rooted tree is a
+rooted tree where the children of each
+internal vertex are ordered.
+In an ordered binary tree, the two
+possible children of a vertex are called
+the left child and the right child, if they
+exist.
+25
+
+=== Trang 26 ===
+Tree Properties
+Theorem 2. A tree with N vertices has N-1
+edges.
+H
+Theorem 5. There are at most 2 leaves in a
+binary tree of height H.
+Corallary. If a binary tree with L leaves is
+full and balanced, then its height is
+H = (cid:170) log L (cid:186) .
+2
+26
+
+=== Trang 27 ===
+An Ordered Binary Tree
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+27
+
+=== Trang 28 ===
+Parent
+The parent of a non-root vertex is the
+(cid:122)
+unique vertex u with a directed edge
+from u to v.
+28
+
+=== Trang 29 ===
+What is the parent of Ed?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+29
+
+=== Trang 30 ===
+Leaf
+A vertex is called a leaf if it has no
+(cid:122)
+children.
+30
+
+=== Trang 31 ===
+How many leaves?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+31
+
+=== Trang 32 ===
+Ancestors
+The ancestors of a non-root vertex are
+(cid:122)
+all the vertices in the path from root to
+this vertex.
+32
+
+=== Trang 33 ===
+How many ancestors of Ken?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+33
+
+=== Trang 34 ===
+Descendants
+The descendants of vertex v are all the
+(cid:122)
+vertices that have v as an ancestor.
+34
+
+=== Trang 35 ===
+How many descendants of Hal?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+35
+
+=== Trang 36 ===
+Level
+The level of vertex v in a rooted tree is
+(cid:122)
+the length of the unique path from the
+root to v.
+36
+
+=== Trang 37 ===
+What is the level of Ted?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+37
+
+=== Trang 38 ===
+Height
+The height of a rooted tree is the
+(cid:122)
+maximum of the levels of its vertices.
+38
+
+=== Trang 39 ===
+What is the height?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+39
+
+=== Trang 40 ===
+Balanced
+A rooted binary tree of height H is
+(cid:122)
+called balanced if all its leaves are at
+levels H or H-1.
+40
+
+=== Trang 41 ===
+Is this binary tree balanced?
+Lou
+Hal Max
+Ed Ken Sue
+Joe
+Ted
+41
+
+=== Trang 42 ===
+Searching takes time . . .
+So the goal in computer programs is to find
+any stored item efficiently when all stored
+items are ordered.
+A Binary Search Tree can be used to store
+items in its vertices. It enables efficient
+searches.
+42
+
+=== Trang 43 ===
+A Binary Search Tree (BST) is . . .
+A special kind of binary tree in which:
+1. Each vertex contains a distinct key value,
+2. The key values in the tree can be compared using
+“greater than” and “less than”, and
+3. The key value of each vertex in the tree is
+less than every key value in its right subtree, and
+greater than every key value in its left subtree.
+
+=== Trang 44 ===
+Shape of a binary search tree . . .
+Depends on its key values and their order of insertion.
+Insert the elements ‘J’ ‘E’ ‘F’ ‘T’ ‘A’ in that order.
+The first value to be inserted is put into the root.
+‘J’
+44
+
+=== Trang 45 ===
+Inserting ‘E’ into the BST
+Thereafter, each value to be inserted begins by
+comparing itself to the value in the root, moving left
+it is less, or moving right if it is greater. This
+continues at each level until it can be inserted as a
+new leaf.
+‘J’
+‘E’
+45
+
+=== Trang 46 ===
+Inserting ‘F’ into the BST
+Begin by comparing ‘F’ to the value in the root, moving
+left it is less, or moving right if it is greater. This
+continues until it can be inserted as a leaf.
+‘J’
+‘E’
+‘F’
+46
+
+=== Trang 47 ===
+Inserting ‘T’ into the BST
+Begin by comparing ‘T’ to the value in the root,
+moving left it is less, or moving right if it is greater.
+This continues until it can be inserted as a leaf.
+‘J’
+‘T’
+‘E’
+‘F’
+47
+
+=== Trang 48 ===
+Inserting ‘A’ into the BST
+Begin by comparing ‘A’ to the value in the root,
+moving left it is less, or moving right if it is greater.
+This continues until it can be inserted as a leaf.
+‘J’
+‘T’
+‘E’
+‘A’ ‘F’
+48
+
+=== Trang 49 ===
+What binary search tree . . .
+is obtained by inserting
+the elements ‘A’ ‘E’ ‘F’ ‘J’ ‘T’ in that order?
+‘A’
+49
+
+=== Trang 50 ===
+Binary search tree . . .
+obtained by inserting
+the elements ‘A’ ‘E’ ‘F’ ‘J’ ‘T’ in that order.
+‘A’
+‘E’
+‘F’
+‘J’
+‘T’
+50
+
+=== Trang 51 ===
+Another binary search tree
+‘J’
+‘E’ ‘T’
+‘A’ ‘H’ ‘M’
+‘K’ ‘P’
+Add nodes containing these values in this order:
+‘D’ ‘B’ ‘L’ ‘Q’ ‘S’ ‘V’ ‘Z’
+51
+
+=== Trang 52 ===
+Is ‘F’ in the binary search tree?
+‘J’
+‘E’ ‘T’
+‘A’ ‘H’ ‘M’ ‘V’
+‘D’ ‘K’ ‘P’ ‘Z’
+‘B’ ‘L’ ‘Q’
+‘S’
+52
+
+=== Trang 53 ===
+Traversal Algorithms
+A traversal algorithm is a procedure for
+(cid:122)
+systematically visiting every vertex of
+an ordered binary tree.
+Tree traversals are defined recursively.
+(cid:122)
+Three traversals are named:
+(cid:122)
+preorder,
+inorder,
+postorder.
+53
+
+=== Trang 54 ===
+PREORDER Traversal Algorithm
+Let T be an ordered binary tree with root r.
+If T has only r, then r is the preorder traversal.
+Otherwise, suppose T , T are the left and
+1 2
+right subtrees at r. The preorder traversal
+begins by visiting r. Then traverses T in
+1
+preorder, then traverses T in preorder.
+2
+54
+
+=== Trang 55 ===
+Preorder Traversal: J E A H T M Y
+Visit first.
+ROOT
+‘J’
+‘E’ ‘T’
+‘A’ ‘H’ ‘M’ ‘Y’
+Visit left subtree second Visit right subtree last
+55
+
+=== Trang 56 ===
+INORDER Traversal Algorithm
+Let T be an ordered binary tree with root r.
+If T has only r, then r is the inorder traversal.
+Otherwise, suppose T , T are the left and
+1 2
+right subtrees at r. The inorder traversal
+begins by traversing T in inorder. Then
+1
+visits r, then traverses T in inorder.
+2
+56
+
+=== Trang 57 ===
+Inorder Traversal: A E H J M T Y
+Visit second
+ROOT
+‘J’
+‘E’ ‘T’
+‘A’ ‘H’ ‘M’ ‘Y’
+Visit left subtree first Visit right subtree last
+57
+
+=== Trang 58 ===
+POSTORDER Traversal Algorithm
+Let T be an ordered binary tree with root r.
+If T has only r, then r is the postorder traversal.
+Otherwise, suppose T , T are the left and right
+1 2
+subtrees at r. The postorder traversal begins
+by traversing T in postorder. Then traverses
+1
+T in postorder, then ends by visiting r.
+2
+58
+
+=== Trang 59 ===
+Postorder Traversal: A H E M Y T J
+Visit last
+ROOT
+‘J’
+‘E’ ‘T’
+‘A’ ‘H’ ‘M’ ‘Y’
+Visit left subtree first Visit right subtree second
+59
+
+=== Trang 60 ===
+A Binary Expression Tree
+ROOT
+‘-’
+‘8’ ‘5’
+INORDER TRAVERSAL: 8 - 5 has value 3
+PREORDER TRAVERSAL: - 8 5
+POSTORDER TRAVERSAL: 8 5 -
+60
+
+=== Trang 61 ===
+A Binary Expression Tree is . . .
+A special kind of binary tree in which:
+1. Each leaf node contains a single operand,
+2. Each nonleaf node contains a single binary
+operator, and
+3. The left and right subtrees of an operator
+node represent subexpressions that must
+be evaluated before applying the operator at
+the root of the subtree.
+61
+
+=== Trang 62 ===
+A Binary Expression Tree
+‘*’
+‘+’ ‘3’
+‘4’ ‘2’
+What value does it have?
+( 4 + 2 ) * 3 = 18
+62
+
+=== Trang 63 ===
+A Binary Expression Tree
+‘*’
+‘+’ ‘3’
+‘4’ ‘2’
+What infix, prefix, postfix expressions does it represent?
+63
+
+=== Trang 64 ===
+A Binary Expression Tree
+‘*’
+‘+’ ‘3’
+‘4’ ‘2’
+Infix: ( ( 4 + 2 ) * 3 )
+Prefix: * + 4 2 3 evaluate from right
+Postfix: 4 2 + 3 * evaluate from left
+64
+
+=== Trang 65 ===
+Levels Indicate Precedence
+When a binary expression tree is used to
+represent an expression, the levels of the
+nodes in the tree indicate their relative
+precedence of evaluation.
+Operations at higher levels of the tree are
+evaluated later than those below them.
+The operation at the root is always the
+last operation performed.
+65
+
+=== Trang 66 ===
+Evaluate
+this binary expression tree
+‘*’
+‘-’ ‘/’
+‘5’ ‘+’ ‘3’
+‘8’
+‘4’ ‘2’
+What infix, prefix, postfix expressions does it represent?
+66
+
+=== Trang 67 ===
+A binary expression tree
+‘*’
+‘-’ ‘/’
+‘8’ ‘5’ ‘+’ ‘3’
+‘4’ ‘2’
+Infix: ( ( 8 - 5 ) * ( ( 4 + 2 ) / 3 ) )
+Prefix: * - 8 5 / + 4 2 3
+Postfix: 8 5 - 4 2 + 3 / * has operators in order used
+67
+
+=== Trang 68 ===
+A binary expression tree
+‘*’
+‘-’ ‘/’
+‘8’ ‘5’ ‘+’ ‘3’
+‘4’ ‘2’
+Infix: ( ( 8 - 5 ) * ( ( 4 + 2 ) / 3 ) )
+Prefix: * - 8 5 / + 4 2 3 evaluate from right
+Postfix: 8 5 - 4 2 + 3 / * evaluate from left
+68
+
+=== Trang 69 ===
+Inorder Traversal: (A + H) / (M - Y)
+Print second
+ROOT
+‘/’
+‘+’ ‘-’
+‘A’ ‘H’ ‘M’ ‘Y’
+Print left subtree first Print right subtree last
+69
+
+=== Trang 70 ===
+Preorder Traversal: / + A H - M Y
+Print first
+ROOT
+‘/’
+‘+’ ‘-’
+‘A’ ‘H’ ‘M’ ‘Y’
+Print left subtree second Print right subtree last
+70
+
+=== Trang 71 ===
+Postorder Traversal: A H + M Y - /
+Print last
+ROOT
+‘/’
+‘+’ ‘-’
+‘A’ ‘H’ ‘M’ ‘Y’
+Print left subtree first Print right subtree second
+71
+
+=== Trang 72 ===
+ACKNOWLEDGMENT:
+This project was supported in part by
+the National Science Foundation
+under grant DUE-ATE 9950056.
+72
